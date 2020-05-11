@@ -4,7 +4,7 @@
 // Start of program. //
 
 // Import libraries. //
-#include<stdio.h>
+#include <stdio.h>
 
 // Define the main(). //
 int main()
@@ -19,4 +19,4 @@ int main()
     return 0;
 }
 
-// End of program. //
+// End of program. //   
