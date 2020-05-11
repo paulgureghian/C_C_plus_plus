@@ -7,11 +7,15 @@
 #include <stdio.h>
 
 // Define the main(). //
-int main()
+int main(void)
 {
     int i, j, sum;
-    scanf("Enter 1'st integer: %d", &i);
-    scanf("Enter 2'nd integer: %d", &j);
+    
+    printf("Enter 1st integer: ");
+    scanf("%d", &i);
+    
+    printf("Enter 2nd integer: ");
+    scanf("%d", &j);
 
     sum = i + j;
 
