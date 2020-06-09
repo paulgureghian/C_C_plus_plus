@@ -9,6 +9,9 @@
 // Define 'main()'. //
 int main() 
 {
+
+    std::cout << "Enter a number: ";
+
     return 0;
 }
 
