@@ -12,6 +12,9 @@ int main()
 
     std::cout << "Enter a number: ";
 
+    int num{ 0 };
+    std::cin >> num;
+
     return 0;
 }
 
