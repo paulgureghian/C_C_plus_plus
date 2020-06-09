@@ -6,4 +6,5 @@
 // Import libraries. //
 #include <iostream>
 
+// Define 'main()'. //
 
