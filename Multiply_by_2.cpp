@@ -7,4 +7,8 @@
 #include <iostream>
 
 // Define 'main()'. //
+int main() 
+{
+    return 0;
+}
 
