@@ -1,7 +1,9 @@
-#include <iostream>
+#include <string>
 #include <vector>
+#include <iostream>
 
 using std::cout;
+using std::string;
 using std::vector;
 
 void PrintBoard(const vector<vector<int>> board) {
