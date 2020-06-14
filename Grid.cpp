@@ -8,6 +8,16 @@ using std::cout;
 using std::string;
 using std::vector;
 
+void ReadBoardFile(string path) {
+  ifstream myfile (path);
+  if (myfile) {
+    string line;
+    while (getline(myfile, line)) {
+      cout << line << "\n";
+    }
+  }
+}
+
 void PrintBoard(const vector<vector<int>> board) {
   for (int i =0; i < board.size(); i++) {
     for (int j =0; j < board[i].size(); j++) {
