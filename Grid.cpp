@@ -29,6 +29,8 @@ void PrintBoard(const vector<vector<int>> board) {
 
 int main() {
 
+    ReadBoardFile("1.board");
+
     vector<vector<int>> board = {{0, 1, 0, 0, 0, 0},
                                 {0, 1, 0, 0, 0, 0},
                                 {0, 1, 0, 0, 0, 0},
