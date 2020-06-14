@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 
+using std::ifstream;
 using std::cout;
 using std::string;
 using std::vector;
