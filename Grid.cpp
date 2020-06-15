@@ -10,6 +10,8 @@ using std::cout;
 using std::string;
 using std::vector;
 
+enum class State {kEmpty, kObstacle};
+
 vector<int> ParseLine(string line) {
     istringstream sline(line);
     int n;
@@ -32,6 +34,12 @@ vector<vector<int>> ReadBoardFile(string path) {
     }
   }
   return board;         
+}
+
+string CellString(State cell) {
+  switch(cell) {
+    case State::kObstacle: return ""
+  }
 }
 
 void PrintBoard(const vector<vector<int>> board) {
