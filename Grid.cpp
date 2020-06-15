@@ -10,6 +10,17 @@ using std::cout;
 using std::string;
 using std::vector;
 
+vector<int> ParseLine(string line) {
+    istringstream sline(line);
+    int n;
+    char c;
+    vector<int> row;
+    while (sline >> n >> c && c == ',') {
+      row.push_back(n);
+    }
+    return row;     
+}
+
 void ReadBoardFile(string path) {
   ifstream myfile (path);
   if (myfile) {
