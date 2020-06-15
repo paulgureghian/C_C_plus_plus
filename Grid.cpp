@@ -4,7 +4,7 @@
 #include <fstream>
 #include <sstream> 
 
-
+using std::istringstream;
 using std::ifstream;
 using std::cout;
 using std::string;
