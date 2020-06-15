@@ -21,14 +21,17 @@ vector<int> ParseLine(string line) {
     return row;     
 }
 
-void ReadBoardFile(string path) {
+vector<vector<int>> ReadBoardFile(string path) {
   ifstream myfile (path);
+  vector<vector<int>> board{};
   if (myfile) {
     string line;
     while (getline(myfile, line)) {
-      cout << line << "\n";
+      vector<int> row = ParseLine(line);
+      board.push_back(row);
     }
   }
+  return board;         
 }
 
 void PrintBoard(const vector<vector<int>> board) {
