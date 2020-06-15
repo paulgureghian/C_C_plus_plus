@@ -2,6 +2,8 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <sstream> 
+
 
 using std::ifstream;
 using std::cout;
