@@ -51,6 +51,15 @@ void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openlist, vector
 }
 
 vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]) {
+  vector<vector<int>> open{};
+
+  int x = init[0];
+  int y = init[1];
+  int g = 0;
+  int h = Heuristic(x, y, goal[0],goal[1]);
+
+  AddToOpen(x, y, g, h, open, grid);
+
   cout << "No path found" << "\n";
   return std::vector<vector<State>> {};
 }
