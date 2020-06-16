@@ -60,6 +60,15 @@ int Heuristic(int x1, int y1, int x2, int y2) {
   return abs(x2 -x1) + abs(y2 - y1);
 }
 
+bool CheckValidCell(int x, int y, vector<vector<State>> &grid) {
+  bool on_grid_x = (x >= 0 && x < grid.size());
+  bool on_grid_y = (y >= 0 && y < grid[0].size());
+
+  if (on_grid_x && on_grid_y) 
+    return grid[x][y]  == State::kEmpty;
+  return false;  
+}
+
 void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openlist, vector<vector<State>> &grid) {
   openlist.push_back(vector<int>{x, y, g, h});
   grid[x][y] = State::kClosed;
