@@ -41,6 +41,14 @@ vector<vector<State>> ReadBoardFile(string path) {
   return board;         
 }
 
+bool Compare(const vector<int> a, vector<int> b) {
+
+  int f1 = a[2] + a[3];
+  int f2 = b[2] + b[3];
+
+  return f1 > f2;
+}
+
 int Heuristic(int x1, int y1, int x2, int y2) {
   return abs(x2 -x1) + abs(y2 - y1);
 }
@@ -63,7 +71,6 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
   cout << "No path found" << "\n";
   return std::vector<vector<State>> {};
 }
-
 
 string CellString(State cell) {
   switch(cell) {
