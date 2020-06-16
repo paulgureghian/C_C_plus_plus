@@ -81,7 +81,7 @@ void ExpandNeighbors(const vector<int> &current, int goal[2], vector<vector<int>
   int y = current[1];
   int g = current[2];
 
-  for (int i = 0; 1 < 4; i++) {
+  for (int i = 0; i < 4; i++) {
     int x2 = x + delta[i][0];
     int y2 = y + delta[i][1];
 
