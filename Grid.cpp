@@ -15,6 +15,8 @@ using std::abs;
 
 enum class State {kEmpty, kObstacle, kClosed, kPath};
 
+const int delta[4][2]{{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+
 vector<State> ParseLine(string line) {
     istringstream sline(line);
     int n;
@@ -72,6 +74,23 @@ bool CheckValidCell(int x, int y, vector<vector<State>> &grid) {
 void AddToOpen(int x, int y, int g, int h, vector<vector<int>> &openlist, vector<vector<State>> &grid) {
   openlist.push_back(vector<int>{x, y, g, h});
   grid[x][y] = State::kClosed;
+}
+
+void ExpandNeighbors(const vector<int> &current, int goal[2], vector<vector<int>> &openlist, vector<vector<State>> &grid) {
+  int x = current[0];
+  int y = current[1];
+  int g = current[2];
+
+  for (int i = 0; 1 < 4; i++) {
+    int x2 = x + delta[i][0];
+    int y2 = y + delta[i][1];
+
+    if (CheckValidCell(x2, y2, grid)) {
+      int g2 = g + 1;
+      int h2 = Heuristic(x2, y2, goal[0], goal[1]);
+      AddToOpen(x2, y2, g2, h2, openlist, grid);
+    } 
+  }
 }
 
 vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2]) {
