@@ -1,1 +1,1 @@
-A simple guessing game written C++.
+A simple guessing game written in C++.
